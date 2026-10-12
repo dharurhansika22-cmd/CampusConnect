@@ -1,0 +1,366 @@
+
+/* Shared page styles */
+
+.help-page,
+.requests-page {
+  min-height: 100vh;
+  padding: 45px 20px;
+  background: linear-gradient(135deg, #f0efff, #f8f9ff 50%, #ffffff);
+  color: #20243a;
+  box-sizing: border-box;
+}
+
+.help-container,
+.requests-container {
+  width: 100%;
+  max-width: 1050px;
+  margin: 0 auto;
+}
+
+.help-heading,
+.requests-heading {
+  margin-bottom: 30px;
+}
+
+.help-heading {
+  text-align: center;
+}
+
+.help-badge {
+  display: inline-block;
+  padding: 7px 14px;
+  border-radius: 30px;
+  background: #e8e6ff;
+  color: #5146d8;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+.help-heading h1,
+.requests-heading h1 {
+  margin: 16px 0 10px;
+  color: #5146d8;
+  font-size: 36px;
+  letter-spacing: -0.5px;
+}
+
+.help-heading p,
+.requests-heading p {
+  color: #687087;
+  line-height: 1.7;
+}
+
+/* Ask for Help form */
+
+.help-heading p {
+  max-width: 560px;
+  margin: 0 auto;
+}
+
+.help-form-card {
+  max-width: 650px;
+  margin: 0 auto;
+  padding: 32px;
+  background: #ffffff;
+  border: 1px solid #e4e7f3;
+  border-radius: 18px;
+  box-shadow: 0 12px 35px rgba(53, 48, 120, 0.09);
+  box-sizing: border-box;
+}
+
+.form-card-heading {
+  margin-bottom: 25px;
+}
+
+.form-card-heading h2 {
+  margin: 0 0 8px;
+  color: #20243a;
+  font-size: 23px;
+}
+
+.form-card-heading p {
+  margin: 0;
+  color: #687087;
+  line-height: 1.6;
+}
+
+.help-form {
+  display: flex;
+  flex-direction: column;
+  gap: 11px;
+}
+
+.help-form label {
+  margin-top: 8px;
+  color: #30354b;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.help-form input,
+.help-form textarea,
+.response-form textarea {
+  width: 100%;
+  padding: 13px 14px;
+  border: 1px solid #dfe2ef;
+  border-radius: 9px;
+  background: #ffffff;
+  color: #20243a;
+  font-family: inherit;
+  font-size: 14px;
+  box-sizing: border-box;
+  outline: none;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.help-form input::placeholder,
+.help-form textarea::placeholder,
+.response-form textarea::placeholder {
+  color: #969bb0;
+}
+
+.help-form input:focus,
+.help-form textarea:focus,
+.response-form textarea:focus,
+.requests-search:focus {
+  border-color: #5146d8;
+  box-shadow: 0 0 0 3px rgba(81, 70, 216, 0.12);
+  outline: none;
+}
+
+.help-form textarea,
+.response-form textarea {
+  resize: vertical;
+}
+
+.help-form textarea {
+  min-height: 120px;
+}
+
+.help-submit-button {
+  margin-top: 16px;
+  padding: 14px 18px;
+  border: none;
+  border-radius: 9px;
+  background: #5146d8;
+  color: #ffffff;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s, transform 0.2s;
+}
+
+.help-submit-button:hover {
+  background: #4035b5;
+  transform: translateY(-1px);
+}
+
+/* Help Requests page */
+
+.requests-heading {
+  text-align: left;
+}
+
+.requests-heading p {
+  margin-bottom: 0;
+}
+
+.requests-search {
+  display: block;
+  width: 100%;
+  max-width: 650px;
+  margin-bottom: 24px;
+  padding: 14px 16px;
+  border: 1px solid #dfe2ef;
+  border-radius: 10px;
+  background: #ffffff;
+  color: #20243a;
+  font-family: inherit;
+  font-size: 15px;
+  box-sizing: border-box;
+  outline: none;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.requests-search::placeholder {
+  color: #969bb0;
+}
+
+.request-card {
+  margin-top: 20px;
+  padding: 25px;
+  background: #ffffff;
+  border: 1px solid #e4e7f3;
+  border-radius: 15px;
+  box-shadow: 0 8px 25px rgba(53, 48, 120, 0.07);
+  overflow-wrap: anywhere;
+  transition: box-shadow 0.2s, transform 0.2s;
+}
+
+.request-card:hover {
+  box-shadow: 0 12px 30px rgba(53, 48, 120, 0.11);
+}
+
+.request-card h2 {
+  margin: 0 0 14px;
+  color: #303080;
+  font-size: 23px;
+}
+
+.request-card p {
+  color: #515a70;
+  line-height: 1.7;
+}
+
+.request-description {
+  white-space: pre-wrap;
+}
+
+.request-label {
+  color: #30354b;
+  font-weight: 700;
+}
+
+.request-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 9px;
+  margin-top: 16px;
+}
+
+.request-button {
+  margin: 0;
+  padding: 11px 16px;
+  border: none;
+  border-radius: 8px;
+  color: #ffffff;
+  font-family: inherit;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s, transform 0.2s;
+}
+
+.request-button:hover {
+  transform: translateY(-1px);
+  filter: brightness(0.94);
+}
+
+.ai-button {
+  background: #7c3aed;
+}
+
+.help-button {
+  background: #5146d8;
+}
+
+.delete-button {
+  background: #dc2626;
+}
+
+.send-button {
+  background: #16a34a;
+}
+
+.cancel-button {
+  background: #64748b;
+}
+
+.ai-loading {
+  margin-top: 18px;
+  color: #7c3aed !important;
+  font-weight: 600;
+}
+
+.ai-response {
+  margin-top: 18px;
+  padding: 18px;
+  border: 1px solid #e1d9ff;
+  border-radius: 10px;
+  background: #f5f1ff;
+  color: #38305f;
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+  line-height: 1.7;
+}
+
+.ai-response p,
+.student-response p {
+  margin-bottom: 0;
+}
+
+.student-response {
+  margin-top: 16px;
+  padding: 18px;
+  border: 1px solid #dbeafe;
+  border-radius: 10px;
+  background: #f0f7ff;
+  color: #263d63;
+  line-height: 1.7;
+}
+
+.response-form {
+  margin-top: 22px;
+  padding-top: 20px;
+  border-top: 1px solid #e4e7f3;
+}
+
+.response-form h3 {
+  margin: 0 0 12px;
+  color: #303080;
+}
+
+.response-form textarea {
+  min-height: 100px;
+  font-family: inherit;
+  font-size: 15px;
+}
+
+.empty-requests {
+  padding: 30px;
+  border: 1px dashed #d6d3f5;
+  border-radius: 12px;
+  background: #ffffff;
+  color: #687087;
+  text-align: center;
+}
+
+.empty-requests h3 {
+  color: #303080;
+}
+
+/* Mobile layout */
+
+@media (max-width: 600px) {
+  .help-page,
+  .requests-page {
+    padding: 30px 15px;
+  }
+
+  .help-heading h1,
+  .requests-heading h1 {
+    font-size: 30px;
+  }
+
+  .help-form-card {
+    padding: 22px 17px;
+  }
+
+  .request-card {
+    padding: 18px;
+  }
+
+  .request-card h2 {
+    font-size: 20px;
+  }
+
+  .request-actions {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .request-button {
+    width: 100%;
+  }
+}
