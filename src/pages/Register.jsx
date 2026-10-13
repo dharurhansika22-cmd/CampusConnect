@@ -12,15 +12,17 @@ function Register() {
   const handleRegister = async (e) => {
     e.preventDefault();
 
-    try {
-      const response = await axios.post(
-        "http://"https://campusconnect-backend-iujm.onrender.com/users",/users",
-        {
-          name: name,
-          email: email,
-          password: password
-        }
-      );
+    
+try {
+  const response = await axios.post(
+    "https://campusconnect-backend-iujm.onrender.com/users",
+    {
+      name: name,
+      email: email,
+      password: password
+    }
+  );
+
 
       console.log(response.data);
 
