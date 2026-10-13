@@ -13,7 +13,7 @@ function HelpRequests() {
   const [replyText, setReplyText] = useState({});
   const [error, setError] = useState("");
 
-  const API = "http://localhost:8080";
+  const API = "https://campusconnect-backend-iujm.onrender.com";
 
   // Load questions and student answers
   const loadData = async () => {

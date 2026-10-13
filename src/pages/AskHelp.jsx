@@ -23,7 +23,7 @@ function AskHelp() {
 
     try {
       const response = await axios.post(
-        "http://localhost:8080/help-requests",
+        "https://campusconnect-backend-iujm.onrender.com/help-requests",
         {
           userId: user.id,
           title,

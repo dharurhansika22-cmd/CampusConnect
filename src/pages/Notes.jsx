@@ -2,7 +2,7 @@
 import { useEffect, useState } from "react";
 import axios from "axios";
 
-const API_URL = "http://localhost:8080/notes";
+const API_URL = "https://campusconnect-backend-iujm.onrender.com/notes";
 
 const ALLOWED_EXTENSIONS = ["pdf", "ppt", "pptx"];
 
