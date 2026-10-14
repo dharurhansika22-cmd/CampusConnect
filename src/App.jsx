@@ -1,4 +1,4 @@
-import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
+import { BrowserRouter, Routes, Route, Link, useNavigate } from "react-router-dom";
 import "./App.css";
 
 import Login from "./pages/Login";
@@ -11,6 +11,23 @@ import Home from "./Home.jsx";
 import ProtectedRoute from "./ProtectedRoute";
 
 function Header() {
+  const navigate = useNavigate();
+
+  let user = null;
+
+  try {
+    user = JSON.parse(localStorage.getItem("loggedInUser"));
+  } catch (error) {
+    user = null;
+  }
+
+  const handleLogout = () => {
+    localStorage.removeItem("loggedInUser");
+    localStorage.removeItem("token");
+    navigate("/login");
+    window.location.reload();
+  };
+
   return (
     <header className="main-header">
       <Link to="/home" className="brand">
@@ -23,7 +40,17 @@ function Header() {
         <Link to="/help-requests">Help Requests</Link>
         <Link to="/notes">Notes</Link>
         <Link to="/profile">Profile</Link>
-        <Link to="/login">Login</Link>
+
+        {user ? (
+          <button type="button" onClick={handleLogout}>
+            Logout
+          </button>
+        ) : (
+          <>
+            <Link to="/login">Login</Link>
+            <Link to="/register">Register</Link>
+          </>
+        )}
       </nav>
     </header>
   );
